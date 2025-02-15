@@ -67,9 +67,11 @@ read_ym() {
 
 read_uuid() {
     echo
-    reading "请输入UUID (回车默认生成): " UUID
-    if [[ -z "$UUID" ]]; then
-        UUID=$(uuidgen -r)
+    reading "请输入UUID (回车默认使用固定UUID): " input_uuid
+    if [[ -z "$input_uuid" ]]; then
+        UUID='d36c4d9f-31c4-45f1-8c64-102a6142001e'  # 使用固定 UUID
+    else
+        UUID="$input_uuid"  # 使用用户输入的 UUID
     fi
     green "您的UUID为: $UUID"
 }
