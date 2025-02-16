@@ -299,7 +299,7 @@ generate_config() {
 
 # 手动指定固定密钥（示例值）
 private_key="mPZo+V9qlrMGCZ7+E6z2NI6NOV34PD++TpAR09PtCWI="
-public_key="bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+public_key="gQkyWLt2w8pMiRzE8pdXL33efiZSbYioa9zJYrWx2nw"
 
 echo "${private_key}" > private_key.txt
 echo "${public_key}" > public_key.txt
