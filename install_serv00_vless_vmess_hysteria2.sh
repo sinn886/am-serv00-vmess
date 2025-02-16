@@ -293,14 +293,9 @@ download_singbox() {
 generate_config() {
 
 # 原始动态生成代码（注释掉）
-# output=$(./web generate reality-keypair)
-# private_key=$(echo "${output}" | awk '/PrivateKey:/ {print $2}')
-# public_key=$(echo "${output}" | awk '/PublicKey:/ {print $2}')
-
-# 手动指定固定密钥（示例值）
-private_key="ABC123def456ghi789jkl012mno345pqr678stu901"
-public_key="gQkyWLt2w8pMiRzE8pdXL33efiZSbYioa9zJYrWx2nw"
-
+output=$(./web generate reality-keypair)
+private_key=$(echo "${output}" | awk '/PrivateKey:/ {print $2}')
+public_key=$(echo "${output}" | awk '/PublicKey:/ {print $2}')
 echo "${private_key}" > private_key.txt
 echo "${public_key}" > public_key.txt
 
